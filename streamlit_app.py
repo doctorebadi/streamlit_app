@@ -82,7 +82,7 @@ preview = st.text_area("CSV Preview", "", height=150, key="preview")
 
 
 st.subheader('Prediction')
-z=svclassifier.predict(data)
+z=svclassifier.predict(df)
 st.write(z[0])
 st.balloons()
   
