@@ -1,1 +1,1 @@
-# streamlit_app
+# prediction-of-heart-disease
