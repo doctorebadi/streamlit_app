@@ -12,4 +12,3 @@ if uploaded_file is not None:
     for i in range(0, min(5, len(data))):
         st.session_state["preview"] += data[i]
 preview = st.text_area("CSV Preview", "", height=150, key="preview")
-upload_state = st.text_area("Upload State", "", key="upload_state")
