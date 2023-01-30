@@ -61,7 +61,6 @@ for percent_complete in range(100):
 st.write(":heavy_minus_sign:" * 15)       
 st.subheader('1-data_from_slider')   
 st.write(df)
-st.subheader('Prediction_data_from_slider')
 z=svclassifier.predict(df)
 if(z[0]==0):
     st.write('Prediction: With a high probability, the person does not have a heart problem')
@@ -90,7 +89,6 @@ try:
     st.subheader('2-data_from_csv_file')
     st.write(spectra_df)
     z1=svclassifier.predict(spectra_df)
-    st.subheader('Prediction_csv_data_from_file')
     if(z1[0]==0):
         st.write('Prediction: With a high probability, the person does not have a heart problem')
     else:
