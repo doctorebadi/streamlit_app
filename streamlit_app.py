@@ -65,11 +65,8 @@ my_bar = st.progress(0)
 for percent_complete in range(100):
     time.sleep(0.1)
     my_bar.progress(percent_complete + 1)
-st.write(df)
-st.subheader('Prediction')
-z=svclassifier.predict(df)
-st.write(z[0])
-
+    
+    
 st.write("""
 # File Picker
 """)
@@ -82,10 +79,20 @@ if uploaded_file is not None:
         st.session_state["preview"] += data[i]
 preview = st.text_area("CSV Preview", "", height=150, key="preview")
 new_person_data = pd.DataFrame(data, index=[0])
-st.subheader('Prediction_new_person')
-st.write(type(new_person_data))
-z=svclassifier.predict(new_person_data)
-st.write(z)
+st.subheader('Prediction_new_person')    
+    
+    
+    
+    
+st.write(df)
+st.subheader('Prediction')
+z=svclassifier.predict(df)
+st.write(z[0])
+
+
+#st.write(type(new_person_data))
+#z=svclassifier.predict(new_person_data)
+#st.write(z)
 
 
 st.balloons()
