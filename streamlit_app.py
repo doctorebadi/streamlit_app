@@ -65,7 +65,7 @@ st.subheader('Prediction_data_from_slider')
 z=svclassifier.predict(df)
 if(z[0]==0):
     st.write('With a high probability, the person does not have a heart problem')
-else
+else:
     st.write('With a high probability, the person have a heart problem')
     
     
