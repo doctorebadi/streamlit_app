@@ -64,7 +64,7 @@ st.write(df)
 st.subheader('Prediction_data_from_slider')
 z=svclassifier.predict(df)
 st.write(z[0])
-st.write(":heavy_minus_sign:" * 34)     
+st.write(":heavy_minus_sign:" * 10)     
     
 st.write("""
 # File Picker
