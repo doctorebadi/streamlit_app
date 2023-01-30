@@ -90,9 +90,9 @@ z=svclassifier.predict(df)
 st.write(z[0])
 
 
-#st.write(type(new_person_data))
-#z=svclassifier.predict(new_person_data)
-#st.write(z)
+st.write(type(new_person_data))
+z=svclassifier.predict(new_person_data)
+st.write(z)
 
 
 st.balloons()
