@@ -58,13 +58,13 @@ for percent_complete in range(100):
     time.sleep(0.1)
     my_bar.progress(percent_complete + 1)
     
-    
+st.write(":heavy_minus_sign:" * 15)       
 st.subheader('data_from_slider')   
 st.write(df)
 st.subheader('Prediction_data_from_slider')
 z=svclassifier.predict(df)
 st.write(z[0])
-st.write(":heavy_minus_sign:" * 10)     
+st.write(":heavy_minus_sign:" * 15)     
     
 st.write("""
 # File Picker
