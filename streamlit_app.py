@@ -70,15 +70,11 @@ for percent_complete in range(100):
 st.write("""
 # File Picker
 """)
-uploaded_file = st.file_uploader("Choose a CSV file")
-if uploaded_file is not None:
-    bytes_data = uploaded_file.getvalue()
-    data = uploaded_file.getvalue().decode('utf-8').splitlines()         
-    st.session_state["preview"] = ''
-    for i in range(0, min(5, len(data))):
-        st.session_state["preview"] += data[i]
-preview = st.text_area("CSV Preview", "", height=150, key="preview")
-new_person_data = pd.DataFrame(data)
+FILE_TYPES = ["csv"]
+
+file = st.file_uploader("Upload .csv file", type=FILE_TYPES)
+if file is not None:
+    data1 = pd.read_csv(file)
 st.subheader('Prediction_new_person')    
     
     
@@ -90,7 +86,7 @@ st.subheader('Prediction_new_person')
 #st.write(z[0])
 
 
-st.write(type(new_person_data))
+st.write(type(data1))
 z1=svclassifier.predict(new_person_data)
 st.write(z1)
 
