@@ -96,7 +96,7 @@ try:
     else:
         st.write('Prediction: With a high probability, the person have a heart problem')
    
-   st.write(z1)
+    st.write(z1)
 except:
     st.write('The file has not been loaded')
 
