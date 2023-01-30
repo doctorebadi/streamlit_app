@@ -91,8 +91,8 @@ st.write(z[0])
 
 
 st.write(type(new_person_data))
-z=svclassifier.predict(new_person_data)
-st.write(z)
+z1=svclassifier.predict(new_person_data)
+st.write(z1)
 
 
 st.balloons()
