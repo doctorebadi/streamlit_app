@@ -63,6 +63,19 @@ st.subheader('1-data_from_slider')
 st.write(df)
 st.subheader('Prediction_data_from_slider')
 z=svclassifier.predict(df)
+if(z[0]==0):
+    st.write('With a high probability, the person does not have a heart problem')
+else
+    st.write('With a high probability, the person have a heart problem')
+    
+    
+   
+    
+
+
+
+
+
 st.write(z[0])
 st.write(":heavy_minus_sign:" * 15)     
     
