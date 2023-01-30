@@ -73,12 +73,14 @@ spectra = st.file_uploader("upload file", type={"csv", "txt"})
 if spectra is not None:
     spectra_df = pd.read_csv(spectra,header=None)
 
-st.subheader('2-data_from_csv_file')
-st.write(spectra_df)
-z1=svclassifier.predict(spectra_df)
-st.subheader('Prediction_csv_data_from_file')
-st.write(z1)
-
+try:
+    st.subheader('2-data_from_csv_file')
+    st.write(spectra_df)
+    z1=svclassifier.predict(spectra_df)
+    st.subheader('Prediction_csv_data_from_file')
+    st.write(z1)
+except:
+  print("An exception occurred")
 
 st.balloons()
   
