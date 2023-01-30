@@ -83,6 +83,7 @@ if uploaded_file is not None:
 preview = st.text_area("CSV Preview", "", height=150, key="preview")
 new_person_data = pd.DataFrame(data, index=[0])
 st.subheader('Prediction_new_person')
+st.write(type(new_person_data))
 z=svclassifier.predict(new_person_data)
 st.write(z)
 
