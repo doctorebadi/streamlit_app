@@ -90,7 +90,7 @@ st.subheader('Prediction_new_person')
 #st.write(z[0])
 
 
-st.write(new_person_data)
+st.write(type(new_person_data))
 z1=svclassifier.predict(new_person_data)
 st.write(z1)
 
