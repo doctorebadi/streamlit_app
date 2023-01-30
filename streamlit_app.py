@@ -91,12 +91,12 @@ try:
     st.write(spectra_df)
     z1=svclassifier.predict(spectra_df)
     st.subheader('Prediction_csv_data_from_file')
-    if(z[0]==0):
+    if(z1[0]==0):
         st.write('Prediction: With a high probability, the person does not have a heart problem')
     else:
         st.write('Prediction: With a high probability, the person have a heart problem')
    
-    st.write(z1)
+    st.write(z1[0])
 except:
     st.write('The file has not been loaded')
 
