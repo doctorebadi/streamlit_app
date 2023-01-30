@@ -67,7 +67,7 @@ st.write(z[0])
 st.write(":heavy_minus_sign:" * 15)     
     
 st.write("""
-# File Picker
+# upload file
 """)
 spectra = st.file_uploader("upload file", type={"csv", "txt"})
 if spectra is not None:
