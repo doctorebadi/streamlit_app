@@ -59,7 +59,7 @@ for percent_complete in range(100):
     my_bar.progress(percent_complete + 1)
     
 st.write(":heavy_minus_sign:" * 15)       
-st.subheader('data_from_slider')   
+st.subheader('1-data_from_slider')   
 st.write(df)
 st.subheader('Prediction_data_from_slider')
 z=svclassifier.predict(df)
@@ -73,7 +73,7 @@ spectra = st.file_uploader("upload file", type={"csv", "txt"})
 if spectra is not None:
     spectra_df = pd.read_csv(spectra,header=None)
 
-st.subheader('data_from_csv_file')
+st.subheader('2-data_from_csv_file')
 st.write(spectra_df)
 z1=svclassifier.predict(spectra_df)
 st.subheader('Prediction_csv_data_from_file')
