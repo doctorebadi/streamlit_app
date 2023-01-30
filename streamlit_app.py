@@ -67,6 +67,13 @@ for percent_complete in range(100):
     my_bar.progress(percent_complete + 1)
     
     
+    
+st.write(df)
+st.subheader('Prediction')
+z=svclassifier.predict(df)
+st.write(z[0])
+    
+    
 st.write("""
 # File Picker
 """)
@@ -76,12 +83,6 @@ if spectra is not None:
 
     
     
-    
-    
-st.write(df)
-st.subheader('Prediction')
-z=svclassifier.predict(df)
-st.write(z[0])
 
 
 st.write(spectra_df)
