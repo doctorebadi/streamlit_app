@@ -80,7 +80,7 @@ try:
     st.subheader('Prediction_csv_data_from_file')
     st.write(z1)
 except:
-  print("An exception occurred")
+    st.write('The file has not been loaded')
 
 st.balloons()
   
