@@ -84,7 +84,7 @@ preview = st.text_area("CSV Preview", "", height=150, key="preview")
 new_person_data = pd.DataFrame(data, index=[0])
 st.subheader('Prediction_new_person')
 z=svclassifier.predict(new_person_data)
-st.write(z[0])
+st.write(z)
 
 
 st.balloons()
