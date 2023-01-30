@@ -73,15 +73,15 @@ st.write("""
 spectra = st.file_uploader("upload file", type={"csv", "txt"})
 if spectra is not None:
     spectra_df = pd.read_csv(spectra,header=None)
-st.write(spectra_df)   
+
     
     
     
     
-#st.write(df)
-#st.subheader('Prediction')
-#z=svclassifier.predict(df)
-#st.write(z[0])
+st.write(df)
+st.subheader('Prediction')
+z=svclassifier.predict(df)
+st.write(z[0])
 
 
 st.write(spectra_df)
