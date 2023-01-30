@@ -84,10 +84,10 @@ st.subheader('Prediction_new_person')
     
     
     
-st.write(df)
-st.subheader('Prediction')
-z=svclassifier.predict(df)
-st.write(z[0])
+#st.write(df)
+#st.subheader('Prediction')
+#z=svclassifier.predict(df)
+#st.write(z[0])
 
 
 st.write(type(new_person_data))
