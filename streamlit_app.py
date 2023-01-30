@@ -78,7 +78,7 @@ if uploaded_file is not None:
     for i in range(0, min(5, len(data))):
         st.session_state["preview"] += data[i]
 preview = st.text_area("CSV Preview", "", height=150, key="preview")
-new_person_data = pd.DataFrame(data, index=[0])
+new_person_data = pd.DataFrame(uploaded_file)
 st.subheader('Prediction_new_person')    
     
     
