@@ -70,12 +70,10 @@ for percent_complete in range(100):
 st.write("""
 # File Picker
 """)
-FILE_TYPES = ["csv"]
-
-file = st.file_uploader("Upload .csv file", type=FILE_TYPES)
-if file is not None:
-    data1 = pd.read_csv(file)
-st.subheader('Prediction_new_person')    
+spectra = st.file_uploader("upload file", type={"csv", "txt"})
+if spectra is not None:
+    spectra_df = pd.read_csv(spectra)
+st.write(spectra_df)   
     
     
     
@@ -86,8 +84,8 @@ st.subheader('Prediction_new_person')
 #st.write(z[0])
 
 
-st.write(data1)
-z1=svclassifier.predict(data1)
+st.write(spectra_df)
+z1=svclassifier.predict(spectra_df)
 st.write(z1)
 
 
